@@ -17,6 +17,9 @@ Library           CalculatorLibrary.py
 Push button
     Push button    1
     Result should be    1
+    FOR    ${i}    IN RANGE    25000
+        Log    "I love rock and roll ${i}"
+    END    
 
 Push multiple buttons
     Push button    1

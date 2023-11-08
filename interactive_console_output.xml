@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20231107 14:31:55.937" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\kklepacka\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Push button">
+<arg>1</arg>
+<msg timestamp="20231107 14:31:56.488" level="FAIL">No keyword with name 'Push button' found.</msg>
+<status status="FAIL" starttime="20231107 14:31:56.488" endtime="20231107 14:31:56.488"/>
+</kw>
+<kw name="Push button">
+<arg>+</arg>
+<status status="NOT RUN" starttime="20231107 14:31:56.489" endtime="20231107 14:31:56.489"/>
+</kw>
+<kw name="Push button">
+<arg>2</arg>
+<status status="NOT RUN" starttime="20231107 14:31:56.490" endtime="20231107 14:31:56.490"/>
+</kw>
+<kw name="Push button">
+<arg>=</arg>
+<status status="NOT RUN" starttime="20231107 14:31:56.490" endtime="20231107 14:31:56.490"/>
+</kw>
+<kw name="Result should be">
+<arg>3</arg>
+<status status="NOT RUN" starttime="20231107 14:31:56.491" endtime="20231107 14:31:56.491"/>
+</kw>
+<status status="PASS" starttime="20231107 14:31:55.954" endtime="20231107 14:32:14.961"/>
+</kw>
+<status status="PASS" starttime="20231107 14:31:55.954" endtime="20231107 14:32:14.962"/>
+</test>
+<status status="PASS" starttime="20231107 14:31:55.939" endtime="20231107 14:32:14.963"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
