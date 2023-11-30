@@ -12,10 +12,10 @@ Test Teardown    Test Teardown
 test3
     [Documentation]    test3
 
-    Given Given calculator has been cleared
-    When When user types "1 + 1"
-    And and user pushes equals
-    Then Then result is "2"
+    Given calculator has been cleared
+    When user types "1 + 1"
+    And user pushes equals
+    Then result is "2"
 
 
 *** Keywords ***
