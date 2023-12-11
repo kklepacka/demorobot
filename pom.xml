@@ -1,0 +1,45 @@
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+        <modelVersion>4.0.0</modelVersion>
+
+        <groupId>squash-tf</groupId>
+        <artifactId>execution-server-robotframework-job</artifactId>
+        <packaging>pom</packaging>
+        <version>2.3.1-RELEASE</version>
+
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.squashtest.ta.galaxia</groupId>
+                    <artifactId>squash-tf-robotframework-runner-maven-plugin</artifactId>
+                    <version>1.0.0-RELEASE</version>
+                    <configuration>
+                        <outputDirectory>${project.basedir}/target/squashTF</outputDirectory>
+                        <configurers>
+                            <configurer implementation="org.squashtest.ta.link.SquashTMCallbackEventConfigurer">
+                                <endpointURL>${status.update.events.url}</endpointURL>
+                                <executionExternalId>${squash.ta.external.id}</executionExternalId>
+                                <jobName>${jobname}</jobName>
+                                <hostName>${hostname}</hostName>
+                                <endpointLoginConfFile>${squash.ta.conf.file}</endpointLoginConfFile>
+                                <reportBaseUrl>${ta.tmcallback.reportbaseurl}</reportBaseUrl>
+                                <jobExecutionId>${ta.tmcallback.jobexecutionid}</jobExecutionId>
+                                <reportName>${ta.tmcallback.reportname}</reportName>
+                            </configurer>
+                        </configurers>
+                        <exporters>
+                            <exporter implementation="org.squashtest.ta.commons.exporter.html.HtmlSummarySuiteResultExporter">
+                                <includeHeader>true</includeHeader>
+                                <outputDirectoryName>html-reports</outputDirectoryName>
+                                <tocDisplayThreshold>3</tocDisplayThreshold>
+                            </exporter>
+                            <exporter implementation="org.squashtest.ta.commons.exporter.html.HtmlSuiteResultExporter">
+                                <outputDirectoryName>html-details</outputDirectoryName>
+                            </exporter>
+                        </exporters>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
