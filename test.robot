@@ -1,3 +1,7 @@
+*** Variables ***
+
+${EXAMPLE}    %{EXAMPLE}
+
 *** Test Cases ***
 
 Test
